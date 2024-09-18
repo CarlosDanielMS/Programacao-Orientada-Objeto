@@ -1,0 +1,57 @@
+public class Produto {
+    private String nome;
+    private int quantidadeEstoque;
+    private double preco;
+
+    public Produto(String nome, int quantidadeEstoque, double preco) {
+        this.nome = nome;
+        setQuantidadeEstoque(quantidadeEstoque); 
+        setPreco(preco); 
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getQuantidadeEstoque() {
+        return quantidadeEstoque;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setPreco(double preco) {
+        if (preco <= 0) {
+            throw new IllegalArgumentException("O preço não pode ser zero ou negativo.");
+        }
+        this.preco = preco;
+    }
+
+    public void adicionarEstoque(int quantidade) {
+        if (quantidade < 0) {
+            throw new IllegalArgumentException("A quantidade a ser adicionada não pode ser negativa.");
+        }
+        this.quantidadeEstoque += quantidade;
+    }
+
+    public void vender(int quantidade) {
+        if (quantidade < 0) {
+            throw new IllegalArgumentException("A quantidade a ser vendida não pode ser negativa.");
+        }
+        if (quantidade > quantidadeEstoque) {
+            throw new IllegalArgumentException("Quantidade em estoque insuficiente.");
+        }
+        this.quantidadeEstoque -= quantidade;
+    }
+
+    public void mostrarDados() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Quantidade em Estoque: " + quantidadeEstoque);
+        System.out.println("Preço: " + preco);
+    }
+}
