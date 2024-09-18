@@ -1,47 +1,57 @@
-// Classe Funcionario
-public class ContaBancaria{
-    private String titular;
-    private int numeroConta;
-    private double saldo;
-    
+public class ContaBancaria {
 
-    
-    public ContaBancaria(String titular, int numeroConta, double saldo){
+    private String titular;
+    private double saldo;
+    private String numeroConta;
+
+
+    public ContaBancaria(String titular, String numeroConta, double saldoInicial) {
         this.titular = titular;
         this.numeroConta = numeroConta;
-        this.saldo = saldo;
-        
+        setSaldo(saldoInicial);
     }
 
-    public String getTitular(){
+    public String getTitular() {
         return titular;
     }
 
-    public void setTitular(String titular){
-        this.titular = titular;        
-    }
-
-    public int getNumeroConta(){
-        return numeroConta;
-    }
-
-    public void setNumeroConta(int numeroConta){
-        this.numeroConta = numeroConta;        
-    }
-
-    public double getSaldo(int saldo){
+    public double getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(int saldo){
-        this.saldo = saldo;        
+    public String getNumeroConta() {
+        return numeroConta;
     }
 
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
 
-    public void exibir(){
-        System.out.println("Titular da Conta: " + titular);
-        System.out.println("Numero da Conta: " + numeroConta);
-        System.out.println("Saldo da Conta: " + saldo);
+    public void setNumeroConta(String numeroConta) {
+        this.numeroConta = numeroConta;
+    }
 
+    public void setSaldo(double saldo) {
+        if (saldo < 0) {
+            throw new IllegalArgumentException("O saldo não pode ser negativo.");
+        }
+        this.saldo = saldo;
+    }
+
+    public void depositar(double valor) {
+        if (valor <= 0) {
+            throw new IllegalArgumentException("O valor do depósito deve ser positivo.");
+        }
+        this.saldo += valor;
+    }
+
+    public void sacar(double valor) {
+        if (valor <= 0) {
+            throw new IllegalArgumentException("O valor do saque deve ser positivo.");
+        }
+        if (valor > saldo) {
+            throw new IllegalArgumentException("Saldo insuficiente.");
+        }
+        this.saldo -= valor;
     }
 }
