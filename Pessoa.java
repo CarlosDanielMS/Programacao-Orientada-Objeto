@@ -1,47 +1,41 @@
+public class Pessoa {
 
-public class Pessoa{
     private String nome;
     private int idade;
-    private String cpf;
-    
+    private final String cpf;
 
-    
-    public Pessoa(String nome, int idade, String cpf){
+    public Pessoa(String nome, int idade, String cpf) {
         this.nome = nome;
-        this.idade = idade;
-        this.cpf = cpf;
-        
+        setIdade(idade);
+        this.cpf = cpf; 
     }
 
-    public String setnome(){
+    public String getNome() {
         return nome;
     }
 
-    public void getnome(String nome){
-        this.nome = nome;        
-    }
-
-    public int setidade(){
+    public int getIdade() {
         return idade;
     }
 
-    public void getidade(int idade){
-        this.idade = idade;        
-    }
-
-    public String setcpf(String cpf){
+    public String getCpf() {
         return cpf;
     }
 
-    public void getcpf(String cpf){
-        this.cpf = cpf;        
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
+    public void setIdade(int idade) {
+        if (idade <= 0) {
+            throw new IllegalArgumentException("A idade deve ser maior que zero.");
+        }
+        this.idade = idade;
+    }
 
-    public void exibir(){
+    public void mostrarDados() {
         System.out.println("Nome: " + nome);
         System.out.println("Idade: " + idade);
         System.out.println("CPF: " + cpf);
-
     }
 }
