@@ -1,0 +1,166 @@
+public class Produto {
+    private String nome;
+    private double preco;
+    private int estoque;
+
+    public Produto(String nome, double preco, int estoque) {
+        this.nome = nome;
+        this.preco = preco;
+        this.estoque = estoque;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public int getEstoque() {
+        return estoque;
+    }
+
+    public void setEstoque(int estoque) {
+        this.estoque = estoque;
+    }
+}
+
+public class Cliente {
+    private String nome;
+    private String endereco;
+    private String email;
+
+    public Cliente(String nome, String endereco, String email) {
+        this.nome = nome;
+        this.endereco = endereco;
+        this.email = email;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+}
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CarrinhoDeCompras {
+    private List<Produto> produtos;
+    private Cliente cliente;
+
+    public CarrinhoDeCompras(Cliente cliente) {
+        this.produtos = new ArrayList<>();
+        this.cliente = cliente;
+    }
+
+    public void adicionarProduto(Produto produto) {
+        produtos.add(produto);
+    }
+
+    public void removerProduto(Produto produto) {
+        produtos.remove(produto);
+    }
+
+    public List<Produto> getProdutos() {
+        return produtos;
+    }
+}
+
+public class Pedido {
+    private CarrinhoDeCompras carrinho;
+    private String data;
+    private String status; // estados: processando, enviado, entregue
+
+    public Pedido(CarrinhoDeCompras carrinho, String data, String status) {
+        this.carrinho = carrinho;
+        this.data = data;
+        this.status = status;
+    }
+
+    public CarrinhoDeCompras getCarrinho() {
+        return carrinho;
+    }
+
+    public void setCarrinho(CarrinhoDeCompras carrinho) {
+        this.carrinho = carrinho;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+}
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class LojaVirtual {
+    private List<Pedido> pedidos;
+    private List<Produto> produtos;
+
+    public LojaVirtual() {
+        this.pedidos = new ArrayList<>();
+        this.produtos = new ArrayList<>();
+    }
+
+    public void processarPedido(Pedido pedido) {
+        pedidos.add(pedido);
+        // Lógica para atualizar o estoque
+    }
+
+    public void atualizarEstoque(Produto produto, int quantidade) {
+        // Lógica para atualizar o estoque
+    }
+
+    public double calcularValorTotalCarrinho(CarrinhoDeCompras carrinho) {
+        double total = 0.0;
+        for (Produto produto : carrinho.getProdutos()) {
+            total += produto.getPreco();
+        }
+        return total;
+    }
+
+    public List<Pedido> gerarRelatoriosVendas() {
+        return pedidos; // Método renomeado
+    }
+}
