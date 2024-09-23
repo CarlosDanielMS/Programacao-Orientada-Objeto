@@ -1,0 +1,102 @@
+public class Tarefa {
+    private String nome;
+    private String descricao;
+    private int duracaoEstimada;
+    private String estado; // estados: novo, em andamento, concluído
+
+    public Tarefa(String nome, String descricao, int duracaoEstimada, String estado) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.duracaoEstimada = duracaoEstimada;
+        this.estado = estado;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public int getDuracaoEstimada() {
+        return duracaoEstimada;
+    }
+
+    public void setDuracaoEstimada(int duracaoEstimada) {
+        this.duracaoEstimada = duracaoEstimada;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+}
+
+public class Funcionario {
+    private String nome;
+    private String cargo;
+
+    public Funcionario(String nome, String cargo) {
+        this.nome = nome;
+        this.cargo = cargo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+}
+
+public class Projeto {
+    private String nome;
+    private String dataInicio;
+    private List<Tarefa> tarefas;
+    private List<Funcionario> funcionarios;
+
+    public Projeto(String nome, String dataInicio) {
+        this.nome = nome;
+        this.dataInicio = dataInicio;
+        this.tarefas = new ArrayList<>();
+        this.funcionarios = new ArrayList<>();
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDataInicio() {
+        return dataInicio;
+    }
+
+    public void setDataInicio(String dataInicio) {
+        this.dataInicio = dataInicio;
+    }
+
+    public void
