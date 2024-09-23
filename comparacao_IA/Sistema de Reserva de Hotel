@@ -1,0 +1,149 @@
+public class Quarto {
+    private int numero;
+    private String tipo; // tipos: simples, duplo, suíte
+    private boolean disponibilidade;
+
+    public Quarto(int numero, String tipo, boolean disponibilidade) {
+        this.numero = numero;
+        this.tipo = tipo;
+        this.disponibilidade = disponibilidade;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public boolean isDisponibilidade() {
+        return disponibilidade;
+    }
+
+    public void setDisponibilidade(boolean disponibilidade) {
+        this.disponibilidade = disponibilidade;
+    }
+}
+
+public class Cliente {
+    private String nome;
+    private String documento;
+    private String contato;
+
+    public Cliente(String nome, String documento, String contato) {
+        this.nome = nome;
+        this.documento = documento;
+        this.contato = contato;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDocumento() {
+        return documento;
+    }
+
+    public void setDocumento(String documento) {
+        this.documento = documento;
+    }
+
+    public String getContato() {
+        return contato;
+    }
+
+    public void setContato(String contato) {
+        this.contato = contato;
+    }
+}
+
+public class Reserva {
+    private Quarto quarto;
+    private Cliente cliente;
+    private String dataCheckIn;
+    private String dataCheckOut;
+
+    public Reserva(Quarto quarto, Cliente cliente, String dataCheckIn, String dataCheckOut) {
+        this.quarto = quarto;
+        this.cliente = cliente;
+        this.dataCheckIn = dataCheckIn;
+        this.dataCheckOut = dataCheckOut;
+    }
+
+    public Quarto getQuarto() {
+        return quarto;
+    }
+
+    public void setQuarto(Quarto quarto) {
+        this.quarto = quarto;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public String getDataCheckIn() {
+        return dataCheckIn;
+    }
+
+    public void setDataCheckIn(String dataCheckIn) {
+        this.dataCheckIn = dataCheckIn;
+    }
+
+    public String getDataCheckOut() {
+        return dataCheckOut;
+    }
+
+    public void setDataCheckOut(String dataCheckOut) {
+        this.dataCheckOut = dataCheckOut;
+    }
+}
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Hotel {
+    private List<Quarto> quartos;
+    private List<Reserva> reservas;
+
+    public Hotel() {
+        this.quartos = new ArrayList<>();
+        this.reservas = new ArrayList<>();
+    }
+
+    public void reservarQuarto(Quarto quarto, Cliente cliente) {
+        Reserva reserva = new Reserva(quarto, cliente, "dataCheckIn", "dataCheckOut");
+        reservas.add(reserva);
+        quarto.setDisponibilidade(false);
+    }
+
+    public List<Quarto> listarQuartosDisponiveisPorTipo(String tipo) {
+        // Implementar lógica para listar quartos disponíveis por tipo
+        return null;
+    }
+
+    public void cancelarReserva(Reserva reserva) {
+        // Implementar lógica para cancelar reserva
+    }
+
+    public List<Reserva> gerarRelatorioReservasFuturas() {
+        return reservas; // Método renomeado
+    }
+}
