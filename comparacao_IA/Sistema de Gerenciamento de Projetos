@@ -99,4 +99,34 @@ public class Projeto {
         this.dataInicio = dataInicio;
     }
 
-    public void
+    public void adicionarTarefa(Tarefa tarefa) {
+        tarefas.add(tarefa);
+    }
+
+    public void alocarFuncionario(Funcionario funcionario) {
+        funcionarios.add(funcionario);
+    }
+}
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Empresa {
+    private List<Projeto> projetos;
+
+    public Empresa() {
+        this.projetos = new ArrayList<>();
+    }
+
+    public void criarProjeto(Projeto projeto) {
+        projetos.add(projeto);
+    }
+
+    public void adicionarFuncionarioAoProjeto(Funcionario funcionario, Projeto projeto) {
+        projeto.alocarFuncionario(funcionario);
+    }
+
+    public List<Projeto> gerarRelatorios() {
+        return projetos; // Método renomeado
+    }
+}
