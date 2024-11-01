@@ -32,8 +32,12 @@ public class Eletroposto {
         vagasDisponiveis++;
     }
 
-    @Override
-    public String toString() {
-        return System.Out.println("Eletroposto{" + "id='" + id + '\'' + ", localizacao='" + localizacao + '\'' + ", vagasDisponiveis=" + vagasDisponiveis + ", tempoMedioCarregamento=" + tempoMedioCarregamento + '}');
+    public void exibirInformacoes() {
+        System.out.println("Eletroposto{" + 
+                           "id='" + id + '\'' + 
+                           ", localizacao='" + localizacao + '\'' + 
+                           ", vagasDisponiveis=" + vagasDisponiveis + 
+                           ", tempoMedioCarregamento=" + tempoMedioCarregamento + 
+                           '}');
     }
 }
