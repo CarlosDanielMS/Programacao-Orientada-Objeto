@@ -16,13 +16,12 @@ public class Motorista {
     public String getNumeroHabilitacao() { return numeroHabilitacao; }
     public String getNivelExperiencia() { return nivelExperiencia; }
 
-    @Override
-    public String toString() {
-        return "Motorista{" +
+    public void exibirMotorista() {
+        System.out.println("Motorista{" +
                 "nome='" + nome + '\'' +
                 ", numeroIdentificacao='" + numeroIdentificacao + '\'' +
                 ", numeroHabilitacao='" + numeroHabilitacao + '\'' +
                 ", nivelExperiencia='" + nivelExperiencia + '\'' +
-                '}';
+                '}');
     }
 }
