@@ -26,12 +26,12 @@ public class Recarga {
         return carro;
     }
     public void exibirRecarga() {
-    System.out.println("Recarga {" +
-        " Carro: " + carro +
-        ", Eletroposto: " + eletroposto +
-        ", Data: " + data +
-        ", Energia Carregada: " + energiaCarregada +
-        " }");
+        System.out.println("Recarga {" +
+            " Carro: " + carro +
+            ", Eletroposto: " + eletroposto +
+            ", Data: " + data +
+            ", Energia Carregada: " + energiaCarregada +
+            " }");
 }
 
 }
