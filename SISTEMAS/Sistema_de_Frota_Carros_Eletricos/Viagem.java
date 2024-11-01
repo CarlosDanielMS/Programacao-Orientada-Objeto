@@ -41,13 +41,13 @@ public class Viagem {
     }
     
     public void exibirViagem() {
-    System.out.println("Viagem {" +
-        " Motorista: " + motorista +
-        ", Carro: " + carro +
-        ", Quilometragem: " + quilometragem +
-        ", Destino: " + destino +
-        ", Paradas de Recarga: " + paradasRecarga +
-        " }");
+        System.out.println("Viagem {" +
+            " Motorista: " + motorista +
+            ", Carro: " + carro +
+            ", Quilometragem: " + quilometragem +
+            ", Destino: " + destino +
+            ", Paradas de Recarga: " + paradasRecarga +
+            " }");
 }
 
 }
