@@ -39,9 +39,13 @@ public abstract class CarroEletrico {
         setAutonomiaAtual(autonomiaMaxima); // Restaura a autonomia total
     }
 
-    @Override
-    public String toString() {
-        return "ID: " + id + ", Marca: " + marca + ", Modelo: " + modelo + ", Ano: " + anoFabricacao +
-               ", Capacidade Bateria: " + capacidadeBateria + " kWh, Autonomia: " + autonomiaMaxima + " km";
-    }
+    public void exibirInformacoes() {
+    System.out.println("ID: " + id + 
+                       ", Marca: " + marca + 
+                       ", Modelo: " + modelo + 
+                       ", Ano: " + anoFabricacao + 
+                       ", Capacidade Bateria: " + capacidadeBateria + " kWh" + 
+                       ", Autonomia: " + autonomiaMaxima + " km");
+}
+
 }
