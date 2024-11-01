@@ -40,12 +40,12 @@ public abstract class CarroEletrico {
     }
 
     public void exibirInformacoes() {
-    System.out.println("ID: " + id + 
-                       ", Marca: " + marca + 
-                       ", Modelo: " + modelo + 
-                       ", Ano: " + anoFabricacao + 
-                       ", Capacidade Bateria: " + capacidadeBateria + " kWh" + 
-                       ", Autonomia: " + autonomiaMaxima + " km");
-}
+        System.out.println("ID: " + id + 
+                           ", Marca: " + marca + 
+                           ", Modelo: " + modelo + 
+                           ", Ano: " + anoFabricacao + 
+                           ", Capacidade Bateria: " + capacidadeBateria + " kWh" + 
+                           ", Autonomia: " + autonomiaMaxima + " km");
+    }
 
 }
