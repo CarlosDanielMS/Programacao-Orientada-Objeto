@@ -40,14 +40,14 @@ public class Viagem {
         return motorista;
     }
     
-    @Override
-    public String toString() {
-        return "Viagem{" +
-                "motorista=" + motorista +
-                ", carro=" + carro +
-                ", quilometragem=" + quilometragem +
-                ", destino='" + destino + '\'' +
-                ", paradasRecarga=" + paradasRecarga +
-                '}';
-    }
+    public void exibirViagem() {
+    System.out.println("Viagem {" +
+        " Motorista: " + motorista +
+        ", Carro: " + carro +
+        ", Quilometragem: " + quilometragem +
+        ", Destino: " + destino +
+        ", Paradas de Recarga: " + paradasRecarga +
+        " }");
+}
+
 }
