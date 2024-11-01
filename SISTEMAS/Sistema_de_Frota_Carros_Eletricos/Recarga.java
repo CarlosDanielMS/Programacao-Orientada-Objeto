@@ -25,13 +25,13 @@ public class Recarga {
     public CarroEletrico getCarro() {
         return carro;
     }
-    @Override
-    public String toString() {
-        return "Recarga{" +
-                "carro=" + carro +
-                ", eletroposto=" + eletroposto +
-                ", data=" + data +
-                ", energiaCarregada=" + energiaCarregada +
-                '}';
-    }
+    public void exibirRecarga() {
+    System.out.println("Recarga {" +
+        " Carro: " + carro +
+        ", Eletroposto: " + eletroposto +
+        ", Data: " + data +
+        ", Energia Carregada: " + energiaCarregada +
+        " }");
+}
+
 }
