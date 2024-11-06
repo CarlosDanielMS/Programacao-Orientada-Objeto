@@ -25,6 +25,7 @@ public class Recarga {
     public CarroEletrico getCarro() {
         return carro;
     }
+
     public void exibirRecarga() {
         System.out.println("Recarga {" +
             " Carro: " + carro +
@@ -32,6 +33,5 @@ public class Recarga {
             ", Data: " + data +
             ", Energia Carregada: " + energiaCarregada +
             " }");
-}
-
+    }
 }
