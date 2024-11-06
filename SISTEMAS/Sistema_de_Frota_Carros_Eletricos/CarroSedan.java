@@ -3,7 +3,6 @@ public class CarroSedan extends CarroEletrico {
         super(id, marca, modelo, anoFabricacao, capacidadeBateria, autonomiaMaxima);
     }
 
-    @Override
     public int getTempoMedioCarga() {
         return 6; // Tempo de carga para Carro Sedan é 6 horas
     }
