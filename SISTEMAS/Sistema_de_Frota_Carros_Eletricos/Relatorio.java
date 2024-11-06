@@ -29,3 +29,7 @@ public class Relatorio{
         }
     }
 }
+
+#O método equals() é usado para comparar se dois objetos são iguais. Ele é utilizado para comparar, por exemplo, 
+#o motorista de uma viagem com o motorista fornecido ou o carro de uma recarga com o carro especificado.
+    
