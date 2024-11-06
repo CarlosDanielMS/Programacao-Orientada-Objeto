@@ -24,15 +24,17 @@ public class Eletroposto {
         return tempoMedioCarregamento; 
     }
 
-    public void reduzirVaga() {
-        if (vagasDisponiveis > 0) vagasDisponiveis--;
+    public void reduzirVaga(){
+        if (vagasDisponiveis > 0){ 
+            vagasDisponiveis--;
+        }
     }
 
-    public void aumentarVaga() {
+    public void aumentarVaga(){
         vagasDisponiveis++;
     }
 
-    public void exibirInformacoes() {
+    public void exibirInformacoes(){
         System.out.println("Eletroposto{" + 
                            "id='" + id + '\'' + 
                            ", localizacao='" + localizacao + '\'' + 
